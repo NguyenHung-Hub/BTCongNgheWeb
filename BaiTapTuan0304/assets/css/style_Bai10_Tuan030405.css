@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+
+    /* animation:scroll 5s ease-in-out alternate infinite; */
+    animation-name: scroll;
+    animation-duration: 5s; /*thời gian*/
+    animation-iteration-count: infinite; /*lặp lại*/
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate; /*phương hướng*/
+
+}
+
+@keyframes scroll{
+    to{
+        left: 100%;
+        transform: rotate(180deg);
+    }
+}
+
+@-webkit-keyframes scroll{
+    to{
+        left: 100%;
+        -webkit-transition: rotate(180deg);
+    }
+}

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#nav ul li{
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    background: #0d90df;
+
+
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.3em;
+
+    border: 2px dashed white;
+    border-radius: 10px;
+    box-shadow: 0 0 0 4px #0d90df, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+
+    text-align: center; 
+    
+    list-style-type: none;
+    
+}
+
+#nav ul li a{
+    color:white;
+    text-decoration: none;
+    text-shadow: -1px -1px #aa3030;
+    font-weight: normal;
+
+}
