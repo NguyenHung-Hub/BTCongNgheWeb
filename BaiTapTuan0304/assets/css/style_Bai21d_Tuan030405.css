@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+    background-color: #8eaadb;
+}
+header {
+    width: 100%;
+    height: 10%;
+    border: 1px solid black;
+}
+nav {
+    width: 20%;
+    height: 80%;
+    border: 1px solid black;
+    float: left;
+}
+section {
+    width: 80%;
+    height: 80%;
+    border: 1px solid black;
+    float: left;
+}
+article {
+    width: 90%;
+    height: 90%;
+
+    margin: 20px auto;
+
+    border: 1px solid black;
+    background-color: #FBE4D5;
+}
+footer {
+    width: 100%;
+    height: 10%;
+    border: 1px solid black;
+    clear: both;
+}
