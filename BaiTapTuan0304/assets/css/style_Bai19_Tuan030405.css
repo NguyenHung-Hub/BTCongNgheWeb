@@ -19,42 +19,62 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#nav {
+
+.nav {
     display: inline-block;
 }
 
-#nav, .subnav {
+.nav, .subnav {
     list-style-type: none;
 
 }
 
-#nav li{
-    
-    padding: 0 32px 0 5px;
-    border-right: 1px solid white;
+.nav li{
+    position: relative;
 }
 
+.nav > li{
+    display: inline-block;
+    padding: 0 48px;
+}
 
-#nav li a {
+.nav > li > a{
     color: white;
-    line-height: 48px;
     text-decoration: none;
+    line-height: 48px;
+}
 
+.nav > li:hover {
+    background-color: #90EE90;
+}
+
+.nav li:hover .subnav{
     display: block;
 }
 
-#nav li:hover a {
-    color: white;
-    background-color: #8eeb8e;
+.subnav{
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
-#nav .subnav {
-    /* display: none; */
-
-    background-color: #f3f3f3;
-    min-width: 120px;
+.subnav li {
+    min-width: 220px;
+    height: 48px;
+    background-color: rgb(226, 224, 224);
 }
 
-#nav .subnav a{
+.subnav li a{
+    display: block;
+    padding-left: 5px;
+    line-height: 48px;
+    text-decoration: none;
     color: black;
 }
+
+.subnav li:hover a{
+    background-color: #19C589;
+}
+
