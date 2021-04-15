@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.col{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.row{
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.col-full{
+    width: 100%;
+}
+
+#main {
+    width: 100%;
+    /* height: 150vh;  */
+
+}
+
+#header {
+    width: 100%;
+    /* height: 50px; */
+}
+
+#header h1{
+    /* display: block; */
+    height: 72px;
+
+    padding: 10px 0 0 20px;
+
+    background-color: #AC4B16;
+    color: #807903;
+    text-shadow: -5px -5px 5px white;
+    font-size: 48px;
+}
+
+#nav {
+    list-style-type: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+#nav li {
+    display: inline-block;
+    /* height: 32px; */
+}
+
+#nav li a {
+    padding: 0 32px;
+
+    text-decoration: none;
+    color: #AC4B16;
+
+    line-height: 32px;
+}
+
+#nav li:hover {
+    background-color: #AC4B16;
+}
+
+#nav li:hover a{
+    color: white;
+
+}
+#banner {
+    /* position: absolute;
+    top: 106px; */
+    /* background: url("/assets/img/DeKiemTra4/travel.jpg") top center / cover no-repeat; */
+
+    width: 100%;
+    /* display: none; */
+
+
+}
+
+#banner img{
+    width: 100%;
+    height: 200px;
+
+}
+
+#content {
+    width: 70%;
+    /* background-color: wheat; */
+    float: left;
+    border-right: 1px solid rgba(160, 132, 63, 0.3);
+}
+
+#content h3{
+    margin: 20px 10px;
+    color: #A0843F;
+}
+
+#content p{
+    margin: 20px 40px ;
+    padding-right: 100px;
+    color: #A0843F;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content form{
+    margin: 20px 40px;
+    
+}
+
+#content form input{
+    border: none;
+    border-bottom: 1px solid rgb(110, 109, 109);
+
+    padding: 8px;
+    outline: none;
+
+    margin: 10px 0;
+}
+
+#content form input:last-child{
+    padding: 8px 24px;
+    margin-top: 20px;
+    background-color: #7D8001;
+    color: white;
+    border-bottom: none;
+}
+
+#sidebar{
+    width: 30%;
+    /* height: 700px; */
+    /* background-color: yellow; */
+    float: left;
+}
+
+.links{
+    width: 90%;
+    margin: 20px auto;
+    background-color: #FAEBD6;
+    border-radius: 20px 20px 0 0;
+}
+
+.links h4{
+    padding: 10px 10px 5px 20px;
+    color: #6C5066;
+}
+
+.links ul{
+    list-style-type: square;
+    color: #AC4B16;
+    margin-left: 20px;
+    padding: 20px;
+
+}
+.links ul li a{
+    color: #AC4B16;
+    text-decoration: none;
+}
+
+.info{
+    width: 90%;
+    margin: 20px auto;
+    /* background-color: #FAEBD6; */
+    border-radius: 20px 20px 0 0;
+}
+.info h4{
+    color: #AC4B16;
+
+    padding: 10px 10px 5px 20px;
+
+}
+.info p{
+    color: #AC4B16;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+#footer {
+    background-image: url('/DeKiemTra/assets/img/DeKiemTra4/travel.jpg');
+    height: 50px;
+
+    clear: both;
+}
+
+#footer p{
+    margin: 10px;
+}
