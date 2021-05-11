@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="19500461" content="NguyenHung">
+    <title>Bai tap 09 tuan 0607</title>
+
+    <style>
+        #typing {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="multiplication"></div>
+        <div id="typing">
+            <label for="">Nhập chữ</label><br>
+            <textarea id="txtInput" onkeyup="typing();" cols="30" rows="10"></textarea><br> <br>
+            <label for="">Số kí tự đã gõ</label>
+            <input type="text" id="txtNumber">
+        </div>
+    </div>
+
+    <script>
+        function convert() {
+            var doF = prompt("Nhập độ F", 10);
+            var doC = (doF - 32) * 5 / 9;
+            alert(doF + "F" + " = " + doC + "C")
+        }
+        convert();
+
+        function multiplication() {
+            var list = "";
+            for (let i = 1; i <= 12; i++) {
+                list += "12 * " + i + " = " + 12 * i + "<br>";
+            }
+
+            document.getElementById("multiplication").innerHTML = list;
+        }
+        multiplication();
+
+        function typing() {
+            var txtInput = document.getElementById("txtInput");
+            if (txtInput.value.length > 200)
+                alert("Bạn đã gõ quá số kí tự cho phép");
+
+            txtNumber.value = txtInput.value.length;
+        }
+
+        // typing();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="19500461" content="NguyenHung">
+    <title>Bai tap 11 tuan 0607</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 100vh;
+        }
+
+        .view {
+            width: 500px;
+            height: 550px;
+
+            box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+
+        .view img {
+            width: 100%;
+            height: 500px;
+
+            padding: 10px;
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .button input {
+            margin: 10px 5px;
+            padding: 5px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="view">
+            <img src="../img/bai11_tuan0607/img1.jpg" id="image" alt="flower">
+            <div class="button">
+                <input type="button" value="Start" onclick="start();">
+                <input type="button" value="Stop" onclick="stop();">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function show() {
+            var listImage = ["img1.jpg", "img2.png", "img3.png"];
+            var number = Math.floor(Math.random() * listImage.length);
+            document.getElementById("image").src = "../img/bai11_tuan0607/" + listImage[number];
+        }
+
+        var time = false;
+        function start() {
+            time = setInterval(show, 1000);
+        }
+
+        function stop() {
+            clearInterval(time);
+        }
+    </script>
+</body>
+
+</html>
