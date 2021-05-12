@@ -27,9 +27,8 @@
 
         function kiemtramk() {
             // var regmk = /([A-Za-z][0-9]+){6,}/;
-            // var regmk = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{6,}$/;
-            var regmk = /^(?=.*[a-z]).{6,}$/;
-            var mk = document.getElementById("ermk").value;
+            var regmk = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})/;
+            var mk = document.getElementById("txtmk").value;
 
             if (regmk.test(mk)) {
                 document.getElementById("ermk").innerHTML = "(*)";
@@ -75,114 +74,120 @@
 </head>
 
 <body>
-    <div class="container border" style="height: auto;">
-        <div class="row">
+    <div class="container border" style="height: auto; padding: 10px;">
+        <!-- <div class="row">
             <div class="col-sx-12 col-md-12 col-lg-12 border" style="height: 100px;">Logo</div>
         </div>
         <div class="row">
             <div class="col-sx-12 col-md-3 col-lg-4 border" style="height: auto;">Link - Nav</div>
-            <div class="col-sx-12 col-md-7 col-lg-4  border" style="height: auto;">
+            <div class="col-sx-12 col-md-7 col-lg-4  border" style="height: auto;"> -->
 
-                <form action="">
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Tên đăng nhập</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" class="form-control" placeholder="Ten dang nhap" id="txttdn">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Mật khẩu</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="password" class="form-control" placeholder="Mat khau" id="txtmk"
-                                onblur="kiemtramk()">
-                            <div id="ermk">(*)</div>
-
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Nhập lại mật khẩu</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="password" onblur="ktnlmk()" class="form-control"
-                                placeholder="Nhap lai mat khau" id="txtmk2">
-                            <div id="ermk2">(*)</div>
-
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-12">
-                            <h3>THÔNG TIN CÁ NHÂN</h3>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Họ và tên</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" class="form-control" placeholder="Ho va ten" id="txtname"
-                                onblur="kiemtraten();">
-                            <div id="erten">*</div>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Ngày sinh</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="date" class="form-control" id="txtday" onblur="kiemtrans()">
-                            <div id="erns">(*)</div>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Giới tính</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="radio" class="form-check-input" checked name="gt" value="Nam">
-                            <label for="gt">Nam</label>
-                            <input type="radio" class="form-check-input" name="gt" value="Nu">
-                            <label for="gt">Nữ</label>
-
-                        </div>
-                    </div>
-
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Địa chỉ</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="text" class="form-control" placeholder="Dia chi" id="txtdc">
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-4">
-                            <label for="Ten">Email</label>
-                        </div>
-                        <div class="col-8">
-                            <input type="email" class="form-control" placeholder="Email" id="txtemail">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <input type="button" value="Dang ky" class="btn btn-dark">
-                            <input type="button" value="Hủy" class="btn btn-dark">
-                        </div>
-                    </div>
-
-                </form>
+        <form action="">
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Tên đăng nhập</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" placeholder="Ten dang nhap" id="txttdn">
+                </div>
             </div>
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Mật khẩu</label>
+                </div>
+                <div class="col-8">
+                    <input type="password" class="form-control" placeholder="Mat khau" id="txtmk" onblur="kiemtramk()">
+                    <div id="ermk">(*)</div>
+
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Nhập lại mật khẩu</label>
+                </div>
+                <div class="col-8">
+                    <input type="password" onkeyup="ktnlmk()" class="form-control" placeholder="Nhap lai mat khau"
+                        id="txtmk2">
+                    <div id="ermk2">(*)</div>
+
+                </div>
+                <div class="col-8xs-8">
+
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-12 text-center">
+                    <h3>THÔNG TIN CÁ NHÂN</h3>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Họ và tên</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" placeholder="Ho va ten" id="txtname" onblur="kiemtraten();">
+                    <div id="erten">*</div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Ngày sinh</label>
+                </div>
+                <div class="col-8">
+                    <input type="date" class="form-control" id="txtday" onblur="kiemtrans()">
+                    <div id="erns">(*)</div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Giới tính</label>
+                </div>
+                <div class="col-8">
+                    
+                    <div class="form-check form-check-inline">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="gt" id="" value="checkedValue" checked> Nam 
+                        </label>
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="gt" id="" value="checkedValue"> Nữ
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Địa chỉ</label>
+                </div>
+                <div class="col-8">
+                    <input type="text" class="form-control" placeholder="Dia chi" id="txtdc">
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-4">
+                    <label for="Ten">Email</label>
+                </div>
+                <div class="col-8">
+                    <input type="email" class="form-control" placeholder="Email" id="txtemail">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <input type="button" value="Đăng ký" class="btn btn-dark">
+                    <input type="button" value="Hủy" class="btn btn-dark">
+                </div>
+            </div>
+
+        </form>
+        <!-- </div>
             <div class="col-sx-12 col-md-2 col-lg-4  border" style="height: auto;">Ads</div>
         </div>
         <div class="row">
             <div class="col-12">Footer</div>
-        </div>
+        </div>-->
     </div>
 
     <!-- Optional JavaScript -->
